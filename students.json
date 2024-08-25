@@ -1,5 +1,5 @@
 {
-    "ENR001": {
+    "1": {
         "name": "John Doe",
         "email": "johndoe@example.com",
         "birthDate": "2002-05-14",
@@ -8,13 +8,58 @@
         "department": "Computer Science",
         "cgpa": "8.9"
     },
-    "ENR002": {
+    "2": {
         "name": "Jane Smith",
         "email": "janesmith@example.com",
         "birthDate": "2001-11-22",
         "address": "456 Maple Ave",
         "tenthPercentage": "92.1",
         "department": "Electrical Engineering",
+        "cgpa": "9.2"
+    }
+    "226230307197": {
+        "name": "solanki krish s.",
+        "email": "krish@gmail.com",
+        "birthDate": "2001-11-22",
+        "address": "baroda padra",
+        "tenthPercentage": "80%",
+        "department": "computer scince Engineering",
+        "cgpa": "9.2"
+    }
+    "226230307200": {
+        "name": "rishit sukhdiya",
+        "email": "rishit@example.com",
+        "birthDate": "2001-11-22",
+        "address": "gandhinagar",
+        "tenthPercentage": "80%",
+        "department": "computer scince Engineering",
+        "cgpa": "9.2"
+    }
+    "226230307201": {
+        "name": "shreyash sukhdiya",
+        "email": "shreyash@example.com",
+        "birthDate": "2001-11-22",
+        "address": "maheshana",
+        "tenthPercentage": "80%",
+        "department": "computer scince Engineering",
+        "cgpa": "9.2"
+    }
+    "226230307217": {
+        "name": "vekariya chu*** harmin",
+        "email": "harmin@example.com",
+        "birthDate": "2001-11-22",
+        "address": "rajkot",
+        "tenthPercentage": "80%",
+        "department": "computer scince Engineering",
+        "cgpa": "9.2"
+    }
+    "226230307202": {
+        "name": "sutariya krishna ",
+        "email": "krishna@example.com",
+        "birthDate": "2001-11-22",
+        "address": "ahemadabad",
+        "tenthPercentage": "80%",
+        "department": "computer scince Engineering",
         "cgpa": "9.2"
     }
 }
