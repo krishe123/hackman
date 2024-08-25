@@ -1,0 +1,20 @@
+{
+    "ENR001": {
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "birthDate": "2002-05-14",
+        "address": "123 Main St",
+        "tenthPercentage": "88.5",
+        "department": "Computer Science",
+        "cgpa": "8.9"
+    },
+    "ENR002": {
+        "name": "Jane Smith",
+        "email": "janesmith@example.com",
+        "birthDate": "2001-11-22",
+        "address": "456 Maple Ave",
+        "tenthPercentage": "92.1",
+        "department": "Electrical Engineering",
+        "cgpa": "9.2"
+    }
+}

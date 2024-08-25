@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakerman - Student Details</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000;
+            /* Black background color */
+            color: #00FF00;
+            /* Green text color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://i.imgur.com/9J4SiPy.png');
+            /* Hacker-themed background image */
+            background-size: cover;
+            /* Cover the entire background */
+            background-position: center;
+            /* Center the background image */
+            position: relative;
+        }
+
+        /* Add overlay to make text more readable */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            z-index: -1;
+        }
+
+        /* Styling for the container holding the form and output */
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            /* Semi-transparent black background */
+            padding: 20px;
+            /* Padding inside the container */
+            border: 2px solid #00FF00;
+            /* Green border */
+            border-radius: 10px;
+            /* Rounded corners */
+            width: 400px;
+            /* Fixed width */
+            text-align: center;
+            /* Center text inside the container */
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Styling for the heading */
+        h1 {
+            font-size: 24px;
+            /* Font size */
+            margin-bottom: 20px;
+            /* Space below the heading */
+        }
+
+        /* Styling for the text input field */
+        input[type="text"] {
+            width: 80%;
+            /* Input field width */
+            padding: 10px;
+            /* Padding inside the input field */
+            border: 2px solid #00FF00;
+            /* Green border */
+            border-radius: 5px;
+            /* Rounded corners */
+            background-color: #000;
+            /* Black background */
+            color: #00FF00;
+            /* Green text */
+            font-size: 16px;
+            /* Font size */
+            margin-bottom: 20px;
+            /* Space below the input field */
+        }
+
+        /* Styling for the submit button */
+        input[type="submit"] {
+            background-color: #00FF00;
+            /* Green background */
+            border: none;
+            /* No border */
+            padding: 10px 20px;
+            /* Padding inside the button */
+            font-size: 16px;
+            /* Font size */
+            color: #000;
+            /* Black text color */
+            cursor: pointer;
+            /* Pointer cursor on hover */
+            border-radius: 5px;
+            /* Rounded corners */
+        }
+
+        /* Styling for the submit button when hovered */
+        input[type="submit"]:hover {
+            background-color: #0F0;
+            /* Lighter green background on hover */
+        }
+
+        /* Styling for the output div */
+        .output {
+            margin-top: 20px;
+            /* Space above the output div */
+            font-size: 18px;
+            /* Font size */
+            border: 1px solid #00FF00;
+            /* Green border */
+            padding: 10px;
+            /* Padding inside the output div */
+            border-radius: 5px;
+            /* Rounded corners */
+            background-color: #001a00;
+            /* Dark green background */
+        }
+
+        /* Styling for the hacker-themed icon */
+        .icon {
+            width: 80px;
+            /* Size of the icon */
+            height: 80px;
+            /* Size of the icon */
+            margin-bottom: 20px;
+            /* Space below the icon */
+            /* filter: hue-rotate(90deg) saturate(400%) brightness(1.2); */
+            /* Apply a green tint with additional effects */
+            transition: filter 0.3s ease-in-out;
+            /* Smooth transition for filter changes */
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <img src="hacker.png" alt="Hacker Icon" class="icon">
+        <h1>Hakerman - Enter Enrollment Number</h1>
+        <form id="hackerForm">
+            <!-- Input field for entering the enrollment number -->
+            <input type="text" id="enrollNumber" placeholder="Enter Enrollment Number" required>
+            <!-- Submit button to get student details -->
+            <input type="submit" value="Get Details">
+        </form>
+        <!-- Div where student details will be displayed -->
+        <div id="output" class="output"></div>
+    </div>
+
+    <script>
+        // JavaScript code starts here
+
+        document.getElementById('hackerForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way (page reload)
+
+            var enrollNumber = document.getElementById('enrollNumber').value; // Get the enrollment number entered by the user
+            var outputDiv = document.getElementById('output'); // Get the div where the result will be displayed
+
+            try {
+                // Use fetch to get the data from the JSON file asynchronously
+                let response = await fetch('students.json'); // 'students.json' is the path to the JSON file; replace with the correct path if necessary
+
+                // Convert the response to JSON
+                let studentData = await response.json();
+
+                if (studentData[enrollNumber]) { // Check if the enrollment number exists in the data
+                    var student = studentData[enrollNumber]; // Get the student details for the entered enrollment number
+
+                    // Display the student details in the output div
+                    outputDiv.innerHTML = `
+                Name: ${student.name}<br>
+                Email: ${student.email}<br>
+                Birth Date: ${student.birthDate}<br>
+                Address: ${student.address}<br>
+                10th Percentage: ${student.tenthPercentage}<br>
+                Department: ${student.department}<br>
+                CGPA: ${student.cgpa}
+            `;
+                } else { // If no student found for the entered enrollment number
+                    outputDiv.innerHTML = 'No details found for Enrollment Number: ' + enrollNumber;
+                }
+            } catch (error) { // Handle any errors that occur during the fetch
+                console.error('Error fetching the JSON file:', error); // Log the error to the console
+                outputDiv.innerHTML = 'An error occurred while fetching the data.'; // Display an error message to the user
+            }
+        });
+
+    </script>
+</body>
+
+</html>
