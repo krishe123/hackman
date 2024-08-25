@@ -4,7 +4,7 @@
         "email": "johndoe@example.com",
         "birthDate": "2002-05-14",
         "address": "123 Main St",
-        "tenthPercentage": "88.5",
+        "tenthPercentage": "88.5%",
         "department": "Computer Science",
         "cgpa": "8.9"
     },
@@ -13,53 +13,53 @@
         "email": "janesmith@example.com",
         "birthDate": "2001-11-22",
         "address": "456 Maple Ave",
-        "tenthPercentage": "92.1",
+        "tenthPercentage": "92.1%",
         "department": "Electrical Engineering",
         "cgpa": "9.2"
     },
     "226230307197": {
-        "name": "solanki krish s.",
+        "name": "Solanki Krish S.",
         "email": "krish@gmail.com",
         "birthDate": "2001-11-22",
-        "address": "baroda padra",
+        "address": "Baroda Padra",
         "tenthPercentage": "80%",
-        "department": "computer scince Engineering",
+        "department": "Computer Science Engineering",
         "cgpa": "9.2"
     },
     "226230307200": {
-        "name": "rishit sukhdiya",
+        "name": "Rishit Sukhdiya",
         "email": "rishit@example.com",
         "birthDate": "2001-11-22",
-        "address": "gandhinagar",
+        "address": "Gandhinagar",
         "tenthPercentage": "80%",
-        "department": "computer scince Engineering",
+        "department": "Computer Science Engineering",
         "cgpa": "9.2"
     },
     "226230307201": {
-        "name": "shreyash sukhdiya",
+        "name": "Shreyash Sukhdiya",
         "email": "shreyash@example.com",
         "birthDate": "2001-11-22",
-        "address": "maheshana",
+        "address": "Mahesana",
         "tenthPercentage": "80%",
-        "department": "computer scince Engineering",
+        "department": "Computer Science Engineering",
         "cgpa": "9.2"
     },
     "226230307217": {
-        "name": "vekariya chu*** harmin",
+        "name": "Vekariya Harmin",
         "email": "harmin@example.com",
         "birthDate": "2001-11-22",
-        "address": "rajkot",
+        "address": "Rajkot",
         "tenthPercentage": "80%",
-        "department": "computer scince Engineering",
+        "department": "Computer Science Engineering",
         "cgpa": "9.2"
     },
     "226230307202": {
-        "name": "sutariya krishna ",
+        "name": "Sutariya Krishna",
         "email": "krishna@example.com",
         "birthDate": "2001-11-22",
-        "address": "ahemadabad",
+        "address": "Ahmedabad",
         "tenthPercentage": "80%",
-        "department": "computer scince Engineering",
+        "department": "Computer Science Engineering",
         "cgpa": "9.2"
     }
 }
